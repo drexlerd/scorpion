@@ -459,12 +459,7 @@ fast_downward_plugin(
     NAME PLUGIN_IW
     HELP "Iterative width search"
     SOURCES
-        search_engines/hierarchical_search_engines/hierarchical_search_engine
-        search_engines/hierarchical_search_engines/goal_test
-        search_engines/hierarchical_search_engines/iterative_width_search
-        search_engines/hierarchical_search_engines/parallelized_search_engine
-        search_engines/hierarchical_search_engines/serialized_search_engine
-        tasks/propositional_task
+        search_engines/iterative_width_search
 )
 
 fast_downward_plugin(
@@ -612,6 +607,14 @@ fast_downward_plugin(
     SOURCES
         heuristics/max_heuristic
     DEPENDS PRIORITY_QUEUES RELAXATION_HEURISTIC
+)
+
+fast_downward_plugin(
+    NAME NOVELTY
+    HELP "Novelty-based algorithms"
+    SOURCES
+        novelty/novelty_table
+    DEPENDS TASK_PROPERTIES
 )
 
 fast_downward_plugin(

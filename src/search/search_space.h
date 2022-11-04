@@ -62,8 +62,6 @@ public:
 
     void dump(const TaskProxy &task_proxy) const;
     void print_statistics() const;
-
-    void reset();
 };
 
 #endif
